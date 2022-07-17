@@ -28,7 +28,7 @@ All visualizations will be present on story panels in one aspect or another.  If
 
 ## Deliverable 3 - Analysis
 As a reminder, the Story Board can be accessed [here](https://public.tableau.com/app/profile/ross.eldridge/viz/ColumbiaDataBootcampChallenge14/AnalysisofCitibikeData).
-I will put the number of visualizations present on each page in parentheses.
+I will put the number of visualizations present on each page in *(parentheses)*.
 
 ### Overview
 This data, overall, shows typical trends in bike usage and parallels we can make between Des Moines and New York that can help support Bike Sharing in Des Moines.
