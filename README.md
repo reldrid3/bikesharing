@@ -38,7 +38,7 @@ This data, overall, shows typical trends in bike usage and parallels we can make
 #### Checkout Durations (2 Visualizations)
 - If you look at how long users took on their bicycles, it's clear that males had far higher peaks - but this makes sense, given that there are around 3x as many male users as female users.
 - However, looking at the "Unknown" gendered users, their trips were far more spread out almost evenly, with the distribution not matching male or female numbers.  This is quite strange.
-##### Screenshot
+
 ![](screenshots/checkout_times.png)
 
 #### "Unknown" Genders - What We Know (2 Visualizations)
@@ -46,7 +46,7 @@ This data, overall, shows typical trends in bike usage and parallels we can make
   - We can infer this because of the huge, huge number of 50-year-old "unknown" gendered people - it's statistically impossible that over 207,000 "unknown" people happen to be exactly 50 years old, and much more likely that "50" is the default age (or rather, 1969 is the default birth year) assigned to someone who doesn't fill out that part of the information.
   - We can guess that most of these people also didn't fill out other identifying information during the sign up process, and should exclude "Unknown" genders from any gender analyses so as not to skew the data in other ways as well.
 - If you remove the "Unknown" gender's ages, you can see that a male average of 37.3 years and a female average of 35.9 years are fairly close and sensible.
-##### Screenshot
+
 ![](screenshots/unknown_gender.png)
 
 #### Weekday Trips - Normalized (3 Visualizations)
@@ -54,7 +54,7 @@ This data, overall, shows typical trends in bike usage and parallels we can make
 - Instead, we can show the data by percent and tabulate it by pane, so that each pane has useful relative information (as compared to the absolute data).
   - We find that subscribers don't have a particular day that really stands out (likely because they may use the service daily) - if anything, they have the least traffic on Sundays.
   - Meanwhile, individual customers have much higher usage on and around the weekend compared to the middle of the work week, likely using the service on an impromptu basis.
-##### Screenshot
+
 ![](screenshots/weekday_normalized.png)
 
 #### Hourly Trips - Normalized (2 Visualizations)
@@ -62,14 +62,15 @@ This data, overall, shows typical trends in bike usage and parallels we can make
 - Looking at trends, weekdays are most popular from 7:00-9:00AM as well as 5:00-7:00PM, correlating with a typical workday, showing that many of our users take bikes to and from work (and from the previous page, would make up many of our subscribers).
   - An interesting anomaly is Wednesday afternoons, when people take far few bicycles home than on other days (making Wednesday at 8:00AM seem like a peak).  Perhaps Wednesday nights are special in New York's social life, and we should be mindful of Des Moines' social life while taking variables into account.
 - Meanwhile, weekends trips are more spread out throughout the day as a larger variety of users take bikes.
-##### Screenshot
+
 ![](screenshots/hourly_normalized.png)
 
 #### Location Maps (2 Visualizations)
 - Here we can see a map containing start and end locations for our bike trips, colored by median age.  I have screenshotted three views of these maps - total, male only, and female only.
   - By color, we can clearly see that our male population is older than our female population.  The median for a given spot is consistently above the average for males, implying a right-skew on the data; meanwhile, the female data seems to have a left-skew.  This may be due to females feeling safer on a bike and using it at a lower age, or perhaps due to gender prefences on biking vs. walking, or other possible causations related to the social dynamics of the city.
   - The age correlations between locations seem to be consistent - in certain locations, there are stops where the median is far lower than average - perhaps due to the presence of a college or university.
-##### Screenshots
+
+##### Male and Female
 ![](screenshots/locations.png)
 ###### Male
 ![](screenshots/locations_male.png)
