@@ -11,7 +11,7 @@ This project is an exercise for the Columbia University Data Science Bootcamp in
 The `tripduration` column was converted to a datetime as per the code in [NYC_CitiBike_Challenge.ipynb](NYC_CitiBike_Challenge.ipynb).
 - Rather than replacing the column, a new column called `tripduration_conv` was created to hold the conversion.
 - As well, I created a second conversion as `tripduration_conv_trim` to hold only the hour, minute, and second of the datetime, but this was not as useful for Tableau, so it remains unused.
-- The DataFrame was exported to a modified **.csv** file without an index.
+- The DataFrame was exported to a modified *.csv* file without an index.
 
 ## Deliverable 2 - Visualizations
 All visualizations will be present on story panels in one aspect or another.  If you would like to view a specific visualization, they can be found at the following sheets:
@@ -32,19 +32,19 @@ I will put the number of visualizations present on each page in parentheses.
 
 ### Overview
 This data, overall, shows typical trends in bike usage and parallels we can make between Des Moines and New York that can help support Bike Sharing in Des Moines.
-- A feature called "Age" was generated based on the user's birth year and the year of the data (2019).  This data is slightly dirty, but by not calculating for any null or 0 birth years, the number of outliers is small enough as to not affect the overall average too much, and the median can be used in other, more focused, places as well.
+- A feature called `Age` was generated based on the user's birth year and the year of the data (2019).  This data is slightly dirty, but by not calculating for any rows with `null` or `birth years = 0`, the number of outliers is small enough as to not affect the overall average too much, and the median can be used in other, more focused, places as well.
 
 ### Results
 #### Checkout Durations (2 Visualizations)
 - If you look at how long users took on their bicycles, it's clear that males had far higher peaks - but this makes sense, given that there are around 3x as many male users as female users.
-- However, looking at the "unknown" gendered users, their trips were far more spread out almost evenly, with the distribution not matching male or female numbers.  This is quite strange.
+- However, looking at the "Unknown" gendered users, their trips were far more spread out almost evenly, with the distribution not matching male or female numbers.  This is quite strange.
 ##### Screenshot
 ![](screenshots/checkout_times.png)
 
 #### "Unknown" Genders - What We Know (2 Visualizations)
-- Looking at the "Unknown" gender compared to age, we can infer one important concept - "unknown" gender implies someone who did not fill out a gender when they signed up and took a trip.
-  - We can infer this because of the huge, huge number of 50-year-old "unknown" gendered people - it's statistically impossible that over 207,000 "unknown" people happen to be 50 years old, and much more likely that "50" is the default age assigned to someone who doesn't fill out that part of the information as well.
-  - We can guess that most of these people also didn't fill out other identifying information during the sign up process, and should exclude "Unknown" genders from future analyses so as not to skew the data.
+- Looking at the "Unknown" gender compared to age, we can infer one important concept - "Unknown" gender implies someone who did not fill out a gender when they signed up and took a trip.
+  - We can infer this because of the huge, huge number of 50-year-old "unknown" gendered people - it's statistically impossible that over 207,000 "unknown" people happen to be exactly 50 years old, and much more likely that "50" is the default age (or rather, 1969 is the default birth year) assigned to someone who doesn't fill out that part of the information.
+  - We can guess that most of these people also didn't fill out other identifying information during the sign up process, and should exclude "Unknown" genders from any gender analyses so as not to skew the data in other ways as well.
 - If you remove the "Unknown" gender's ages, you can see that a male average of 37.3 years and a female average of 35.9 years are fairly close and sensible.
 ##### Screenshot
 ![](screenshots/unknown_gender.png)
@@ -79,6 +79,6 @@ This data, overall, shows typical trends in bike usage and parallels we can make
 ### Summary
 It will be important to study the social dynamics of the city of Des Moines to help determine how to best run a bike sharing company there.  Understanding which days the populace goes out after work, which sections of the city have an older or younger population, and many other aspects will be important when determining what bikes to use, how often they made need repairs, etc.  Des Moines may also have a different population makeup, and we may need to cater to a population with higher average ages, a difference in the number of male vs. female bike riders, etc.
 #### Additional Visualization Ideas
-- One additional graph of use may come from a combination of gender and trip duration.  We know that some variables - like starting hour and weekday - do not vary by gender, but there may be others that do.  Knowing whether males or females have longer commutes or take longer rides may play a role in how we distribute bicycles.
+- One additional graph of use may come from a combination of gender and trip duration.  We know that some variables - like *starting hour* and *weekday* - do not vary by gender, but there may be others that do.  Knowing whether males or females have longer commutes or take longer rides may play a role in how we distribute bicycles.
 - Plotting `Start Station Id` and `End Station Id`, we could see if there are any stops where there are far more starts and stops, or vice versa.  This would imply that many bicycles would need to be redistributed from one location to another, which is an extra cost to the company that we can mitigate with pre-arranged contracts.
 - We can also use those two variables try and come up with another feature that would be very useful to graph.  If we combined the `Start Station Id` and `End Station Id` fields together into a single entity, we could see the distribution of trip itineraries in a graph.  We could identify if there are any routes that are particularly common (hopefully in both directions) - maybe even making an "express" section with bikes that can only be picked up and dropped off between two commonly ridden locations.
