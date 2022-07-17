@@ -1,6 +1,8 @@
 # Bikesharing Challenge
 This project is an exercise for the Columbia University Data Science Bootcamp in using and displaying data with Tableau.
 
+We will be analyzing some bicycle sharing data for New York City to justify and begin to plan a bicycle sharing service for Des Moines, Iowa.  We will look at some variables such as gender and age, and come up with a series of considerations to be made as we plan our Des Moines bicycle sharing service.
+
 ## Links
 - Data was obtained from:
   - [https://s3.amazonaws.com/tripdata/201908-citibike-tripdata.csv.zip](https://s3.amazonaws.com/tripdata/201908-citibike-tripdata.csv.zip)
